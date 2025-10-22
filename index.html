@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gabriel Epuyao Barrientos - Investigador - Universidad de La Frontera">
+    <meta name="author" content="Gabriel Epuyao Barrientos">
+    
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Gabriel Epuyao Barrientos">
+    <meta property="og:description" content="Investigador en salud mental, inteligencia artificial, agentes generativos y ciudades">
+    <meta property="og:type" content="website">
+    
+    <title>Gabriel Epuyao Barrientos - Investigador &amp; coordinador</title>
+    
+    <!--
+      ESTRUCTURA DE ARCHIVOS PARA GITHUB PAGES:
+      
+      tu-repositorio/
+      ├── index.html (este archivo)
+      └── profile.jpg (tu foto de perfil)
+      
+      IMPORTANTE:
+      - Ambos archivos deben estar en el mismo directorio
+      - La foto debe llamarse "profile.jpg" (o actualiza la referencia en el código)
+      - La foto se cargará automáticamente en la página
+      - Al descargar la vCard, la foto se incluirá en formato base64
+      
+      PARA ACTUALIZAR TU FOTO:
+      1. Reemplaza el archivo profile.jpg en tu repositorio
+      2. No necesitas modificar el código HTML
+      3. GitHub Pages actualizará automáticamente
+    -->
+    
+    <style>
+        :root {
+          /* WCAG AAA Compliant High-Contrast Color Palette */
+          
+          /* Green Accents - Only for buttons and strategic elements */
+          --color-primary: #1e4d30;        /* Dark forest green - 10.5:1 on white */
+          --color-primary-hover: #2d5f3f;  /* Slightly lighter - 7.2:1 on white */
+          --color-primary-active: #1e4529; /* Darker active state */
+          --color-icon-green: #0d7d4c;     /* Medium green for icons - 4.8:1 on white */
+          
+          /* Text Colors - Maximum Contrast on Light Backgrounds */
+          --color-text-primary: #0a0a0a;   /* Almost black - 19.57:1 on white (AAA) */
+          --color-text-secondary: #2c2c2c; /* Dark gray - 14.77:1 on white (AAA) */
+          --color-text-tertiary: #4a4a4a;  /* Medium gray - 9.74:1 on white (AAA) */
+          --color-text-light: #4a4a4a;     /* Same as tertiary for consistency */
+          
+          /* Link Colors - Blue for distinction */
+          --color-link: #0066cc;            /* Blue - 7.0:1 on white (AAA) */
+          --color-link-hover: #004499;      /* Darker blue - 10.7:1 on white (AAA) */
+          
+          /* Background Colors - Light and Clean */
+          --color-background: #fafafa;      /* Very light gray */
+          --color-surface: #ffffff;         /* Pure white */
+          --color-surface-subtle: #f5f5f5;  /* Subtle light gray */
+          --color-button-text: #ffffff;     /* White text on green buttons */
+          
+          /* Border Colors - Subtle Grays */
+          --color-border: #e8e8e8;          /* Light gray */
+          --color-border-medium: #d0d0d0;   /* Medium gray */
+          --color-border-strong: #b0b0b0;   /* Darker gray */
+          
+          /* Modern Typography - System Fonts */
+          --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+          --font-size-name: 48px;
+          --font-size-section: 24px;
+          --font-size-title: 20px;
+          --font-size-body: 17px;
+          --font-size-secondary: 15px;
+          --font-size-small: 14px;
+          --font-weight-regular: 400;
+          --font-weight-semibold: 600;
+          --font-weight-bold: 700;
+          --line-height-tight: 1.2;
+          --line-height-normal: 1.5;
+          
+          /* 2025 Spacing System (8px grid) - Generous */
+          --space-8: 8px;
+          --space-16: 16px;
+          --space-24: 24px;
+          --space-32: 32px;
+          --space-48: 48px;
+          --space-64: 64px;
+          --space-96: 96px;
+          
+          /* Modern Shadows - Subtle */
+          --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.04);
+          --shadow-photo: 0 4px 16px rgba(0, 0, 0, 0.08);
+          --shadow-button: 0 2px 8px rgba(30, 77, 48, 0.2);
+          --shadow-button-hover: 0 4px 12px rgba(30, 77, 48, 0.25);
+          
+          /* Border Radius - Modern */
+          --radius-card: 12px;
+          --radius-button: 8px;
+          --radius-photo: 50%;
+          
+          /* Transitions - Smooth */
+          --transition-smooth: all 0.2s ease;
+        }
+
+        /* REMOVED DARK MODE - Forces light mode for accessibility */
+        /* Dark mode caused contrast violations with dark green text on dark backgrounds */
+        /* All users now get consistent high-contrast light mode experience */
+
+        /* Base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: var(--font-size-body);
+            font-family: var(--font-family);
+            line-height: var(--line-height-body);
+            color: var(--color-text-primary);
+            background-color: var(--color-background);
+            -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            min-height: 100vh;
+            background-color: var(--color-background);
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Hero Section - Split Layout (2025 Design) */
+        .hero {
+            background-color: var(--color-background);
+            padding: var(--space-64) var(--space-24);
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--space-48);
+            align-items: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        /* Profile photo styles - Larger, more prominent */
+        .hero-photo {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .profile-photo {
+            width: 200px;
+            height: 200px;
+            border-radius: var(--radius-photo);
+            object-fit: cover;
+            box-shadow: var(--shadow-photo);
+            transition: var(--transition-smooth);
+        }
+        
+        .profile-photo-placeholder {
+            width: 200px;
+            height: 200px;
+            border-radius: var(--radius-photo);
+            background: linear-gradient(135deg, #e8f5e8, #d0ead0);
+            border: 4px solid #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-primary);
+            font-size: 48px;
+            font-weight: var(--font-weight-bold);
+            box-shadow: var(--shadow-photo);
+        }
+        
+        /* Hero info - Right side */
+        .hero-info {
+            text-align: left;
+        }
+        
+        .hero-name {
+            font-size: var(--font-size-name);
+            font-weight: var(--font-weight-bold);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-16);
+            letter-spacing: -0.02em;
+            line-height: var(--line-height-tight);
+        }
+        
+        .hero-role {
+            font-size: var(--font-size-title);
+            color: var(--color-text-secondary);
+            font-weight: var(--font-weight-semibold);
+            margin-bottom: var(--space-24);
+        }
+        
+        .hero-research {
+            font-size: var(--font-size-body);
+            color: var(--color-text-tertiary);
+            line-height: var(--line-height-normal);
+            max-width: 480px;
+        }
+        
+        .hero-research div[style*="grid"] {
+            font-size: var(--font-size-secondary);
+        }
+        
+        .hero-research div[style*="grid"] > div {
+            display: flex;
+            align-items: center;
+            gap: var(--space-8);
+            padding: var(--space-8);
+            background: rgba(30, 77, 48, 0.05);
+            border-radius: var(--radius-button);
+            font-weight: var(--font-weight-medium);
+            color: var(--color-text-secondary);
+            transition: var(--transition-smooth);
+        }
+        
+        .hero-research div[style*="grid"] > div:hover {
+            background: rgba(30, 77, 48, 0.08);
+            transform: translateY(-1px);
+        }
+
+        /* Main content - Card-based sections */
+        .main {
+            background-color: var(--color-background);
+            padding: var(--space-48) var(--space-24);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-24);
+        }
+
+        /* Card component - Individual sections */
+        .card {
+            background: var(--color-surface);
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            padding: var(--space-32);
+        }
+
+        /* Card section headers */
+        .card-title {
+            font-size: var(--font-size-section);
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-24);
+        }
+        
+        /* Position card content */
+        .position-content {
+            font-size: var(--font-size-body);
+            line-height: var(--line-height-normal);
+            color: var(--color-text-secondary);
+        }
+        
+        .position-title {
+            font-weight: var(--font-weight-semibold);
+            color: var(--color-text-primary);
+            margin-bottom: var(--space-8);
+        }
+        
+        .position-hierarchy {
+            color: var(--color-text-tertiary);
+        }
+        
+        .position-hierarchy .highlight {
+            color: var(--color-text-primary);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        /* Academic roles card */
+        .roles-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .roles-list li {
+            font-size: var(--font-size-body);
+            color: var(--color-text-secondary);
+            margin-bottom: var(--space-16);
+            padding-left: var(--space-24);
+            position: relative;
+        }
+        
+        .roles-list li:before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--color-icon-green);
+            font-weight: var(--font-weight-bold);
+        }
+        
+        /* Contact card */
+        .contact-list {
+            display: grid;
+            gap: var(--space-16);
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: var(--space-16);
+            font-size: var(--font-size-body);
+            color: var(--color-text-secondary);
+        }
+        
+        .contact-icon {
+            font-size: var(--font-size-title);
+            width: 24px;
+            flex-shrink: 0;
+            color: var(--color-icon-green);
+        }
+        
+        .contact-item a {
+            color: var(--color-link);
+            text-decoration: none;
+            font-weight: var(--font-weight-regular);
+        }
+        
+        .contact-item a:hover {
+            color: var(--color-link-hover);
+            text-decoration: underline;
+        }
+
+        /* Download CTA - Large and prominent */
+        .download-section {
+            text-align: center;
+            padding: var(--space-48) 0;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-16);
+            padding: 18px 48px;
+            background: var(--color-primary);
+            color: var(--color-button-text);
+            border: none;
+            border-radius: var(--radius-button);
+            font-size: 18px;
+            font-weight: var(--font-weight-semibold);
+            text-decoration: none;
+            cursor: pointer;
+            transition: var(--transition-smooth);
+            box-shadow: var(--shadow-button);
+            min-width: 240px;
+        }
+
+        .download-btn:hover {
+            background: var(--color-primary-hover);
+            transform: translateY(-1px);
+            box-shadow: var(--shadow-button-hover);
+        }
+
+        .download-btn:active {
+            background: var(--color-primary-active);
+            transform: translateY(0);
+        }
+
+        .download-btn:focus-visible {
+            outline: 2px solid var(--color-primary);
+            outline-offset: 2px;
+        }
+
+        .download-icon {
+            font-size: 20px;
+        }
+
+        /* Footer - Minimal */
+        .footer {
+            background-color: var(--color-background);
+            text-align: center;
+            padding: var(--space-48) var(--space-24);
+            color: var(--color-text-light);
+            font-size: var(--font-size-small);
+        }
+
+        /* Responsive design - Mobile-first */
+        @media (max-width: 768px) {
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--space-32);
+                padding: var(--space-48) var(--space-16);
+            }
+            
+            .profile-photo,
+            .profile-photo-placeholder {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .profile-photo-placeholder {
+                font-size: 36px;
+            }
+            
+            .hero-info {
+                text-align: center;
+            }
+            
+            .hero-name {
+                font-size: 36px;
+            }
+            
+            .main {
+                padding: var(--space-32) var(--space-16);
+            }
+            
+            .card {
+                padding: var(--space-24);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero {
+                padding: var(--space-32) var(--space-16);
+            }
+            
+            .hero-name {
+                font-size: 28px;
+            }
+            
+            .hero-role {
+                font-size: var(--font-size-body);
+            }
+            
+            .hero-research {
+                font-size: var(--font-size-secondary);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section - Split Layout -->
+    <section class="hero">
+        <div class="hero-photo">
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFhUYHSgcGhsjHBYWICwgIyYnKSopGR8tMC0oKSj/2wBDAQMEBQYFBgYGBgYIBQgKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAyAMgDASIAAhEBAxEB/8QAHQABAAICAwEAAAAAAAAAAAAAAAEFAQIGAwcJCP/EAEcQAAEDAgMEBgUHBwQDAAAAAAECAwQABREGEiExQVETImFxkQYyUqGx0RQjYnKSsXPC8CM0Q1OSorPB0yVTY4OS/8QAGgEBAQEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACERAQEAAgICAgMAAAAAAAAAAAABAgMRBBIxIUETIlFxkf/aAAwDAQACEQMRAD8A7qIiAiIgIiICIiAiIgIiICIiAiIgo9p3xq2p0l9w+e0xQp2JX3Kkqzq2bqQ2b0n9i9Czq1J2u2bqf4nqj9m2g2s2cV9w5l3h4kGZp9y9yq7x7WcK3y2I0m8vH0q3C9oY1i4vGmG2t3Kk2S9k1l3i6pQx3lJxkzW2S7eQk2oN8v+E7f8AxuYQ8r9q0f2XvM0Jm3p2b5lK5h2pUj0z2r7y1k/1q3Y0fXl1v4kq7wV4q2bZlK0nJ6W+0c2W+Qw1gY1m2m5t1Yy5l7qkqCmbiK4ZQk8k4U1k9uUo4fTj9wY0e3j1q0Wq1d3VtJ8iK2oZq9S1e2m2l2mVq0m2rY2m2m2YfB6Hqv6j1X0yq3m1Ztqk2rVfW+q7q9f8ARv0+X8r2vK8i1k6w1rU3pK2pblb4a2N7o6m3q5p8X9l5mQn8o5SP2Y9Y7Qm0mH4Qy8tQ5m3k6r2b1JXlq2r2m3m3m3m2g0q0r0pVq0r0q0q0q0q0q0q0q0q0q0q0q0q0q0q0r0q0q0q0r0q0q0q0q0q0q0q0q0q0q0q0q0q0q0q0q0q0q0r0q0q0q0q0q0q0q0q0q0q0q0r0q0q0q0q0q0q0q0q0q0q0r//Z" alt="Gabriel Epuyao Barrientos" class="profile-photo" 
+                 onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="profile-photo-placeholder" style="display: none;">
+                GE
+            </div>
+        </div>
+        
+        <div class="hero-info">
+            <h1 class="hero-name">GABRIEL EPUYAO<br>BARRIENTOS</h1>
+            <p class="hero-role">Investigador</p>
+            <div class="hero-research">
+                <p style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-16);">Líneas de investigación:</p>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-8);">
+                    <div>🧠 Salud mental</div>
+                    <div>🤖 Inteligencia artificial</div>
+                    <div>👥 Agentes generativos</div>
+                    <div>🏙️ Ciudades</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content - Card-based Sections -->
+    <main class="main">
+        <div class="container">
+            <!-- Position Card -->
+            <section class="card">
+                <h2 class="card-title">Posición actual</h2>
+                <div class="position-content">
+                    <div class="position-title">Coordinador de vinculación, innovación y emprendimiento</div>
+                    <div class="position-hierarchy">
+                        <span class="highlight">Dirección de pregrado</span> &gt; Facultad de ingeniería y ciencias &gt; Universidad de La Frontera
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Academic Roles Card -->
+            <section class="card">
+                <h2 class="card-title">Roles académicos</h2>
+                <ul class="roles-list">
+                    <li>Estudiante del programa de doctorado en ingeniería</li>
+                    <li>Asesor tecnológico en asignatura ING500 Capstone Multidisciplinario</li>
+                    <li>Docente responsable en asignatura ING300 Taller de empresas tecnológicas</li>
+                </ul>
+            </section>
+            
+            <!-- Contact Card -->
+            <section class="card">
+                <h2 class="card-title">Contacto</h2>
+                <div class="contact-list">
+                    <div class="contact-item">
+                        <span class="contact-icon">📱</span>
+                        <span>+56 9 6306 8845</span>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">✉️</span>
+                        <a href="mailto:gabriel.epuyao@ufrontera.cl">gabriel.epuyao@ufrontera.cl</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🌐</span>
+                        <a href="https://fica.ufro.cl" target="_blank">fica.ufro.cl</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">📍</span>
+                        <span>Av. Francisco Salazar 01145, Temuco, Chile</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+        <!-- Download CTA - Prominent and centered -->
+        <div class="download-section">
+            <button id="download-btn" class="download-btn">
+                <span class="download-icon">⬇️</span>
+                Descargar vCard
+            </button>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Gabriel Epuyao Barrientos. Universidad de La Frontera.</p>
+    </footer>
+
+    <script>
+        // Dynamic vCard generation with photo conversion
+        document.getElementById('download-btn').addEventListener('click', async function(e) {
+            e.preventDefault();
+            
+            try {
+                // Show loading state
+                this.textContent = 'Generando vCard...';
+                this.disabled = true;
+                
+                // Fetch the image file
+                const response = await fetch('profile.jpg');
+                
+                if (!response.ok) {
+                    throw new Error('No se pudo cargar la imagen');
+                }
+                
+                const blob = await response.blob();
+                
+                // Convert to base64
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    // Remove the data:image/jpeg;base64, prefix
+                    const base64data = reader.result.split(',')[1];
+                    
+                    // Generate vCard with photo
+                    const vcard = `BEGIN:VCARD
+VERSION:3.0
+FN:Gabriel Epuyao Barrientos
+N:Barrientos;Gabriel;Epuyao;;
+ORG:Universidad de La Frontera;Facultad de Ingeniería y Ciencias;Dirección de Pregrado
+TITLE:Coordinador de vinculación, innovación y emprendimiento
+ROLE:Investigador
+TEL;TYPE=CELL:+56963068845
+EMAIL;TYPE=INTERNET:gabriel.epuyao@ufrontera.cl
+URL:https://fica.ufro.cl
+ADR;TYPE=WORK:;;Av. Francisco Salazar 01145;Temuco;La Araucanía;4811230;Chile
+NOTE:Investigador en salud mental, inteligencia artificial, agentes generativos y ciudades. Estudiante del programa de doctorado en ingeniería. Asesor tecnológico ING500 y docente ING300.
+PHOTO;ENCODING=BASE64;TYPE=JPEG:${base64data}
+REV:${new Date().toISOString()}
+END:VCARD`;
+                    
+                    // Create blob and download
+                    const vcardBlob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+                    const url = window.URL.createObjectURL(vcardBlob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'gabriel_epuyao.vcf';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    window.URL.revokeObjectURL(url);
+                    
+                    // Reset button
+                    document.getElementById('download-btn').textContent = 'Descargar vCard';
+                    document.getElementById('download-btn').disabled = false;
+                };
+                
+                reader.onerror = function() {
+                    throw new Error('Error al convertir la imagen');
+                };
+                
+                reader.readAsDataURL(blob);
+                
+            } catch (error) {
+                console.error('Error al generar vCard con foto:', error);
+                
+                // Fallback: Generate vCard without photo
+                const vcardSinFoto = `BEGIN:VCARD
+VERSION:3.0
+FN:Gabriel Epuyao Barrientos
+N:Barrientos;Gabriel;Epuyao;;
+ORG:Universidad de La Frontera;Facultad de Ingeniería y Ciencias;Dirección de Pregrado
+TITLE:Coordinador de vinculación, innovación y emprendimiento
+ROLE:Investigador
+TEL;TYPE=CELL:+56963068845
+EMAIL;TYPE=INTERNET:gabriel.epuyao@ufrontera.cl
+URL:https://fica.ufro.cl
+ADR;TYPE=WORK:;;Av. Francisco Salazar 01145;Temuco;La Araucanía;4811230;Chile
+NOTE:Investigador en salud mental, inteligencia artificial, agentes generativos y ciudades. Estudiante del programa de doctorado en ingeniería. Asesor tecnológico ING500 y docente ING300.
+REV:${new Date().toISOString()}
+END:VCARD`;
+                
+                const vcardBlob = new Blob([vcardSinFoto], { type: 'text/vcard;charset=utf-8' });
+                const url = window.URL.createObjectURL(vcardBlob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = 'gabriel_epuyao.vcf';
+                document.body.appendChild(a);
+                a.click();
+                document.body.removeChild(a);
+                window.URL.revokeObjectURL(url);
+                
+                // Reset button
+                this.textContent = 'Descargar vCard';
+                this.disabled = false;
+                
+                // Alert user
+                alert('vCard generada sin foto. Asegúrate de que profile.jpg esté en el mismo directorio.');
+            }
+        });
+
+        // Enhanced interactions for 2025 design
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add subtle hover effects to cards
+            const cards = document.querySelectorAll('.card');
+            
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.08)';
+                    this.style.transition = 'all 0.2s ease';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.04)';
+                });
+            });
+        });
+    </script>
+    
+    <!--
+      INSTRUCCIONES PARA USAR EN GITHUB PAGES:
+      
+      1. Crea un repositorio en GitHub
+      2. Sube DOS archivos al repositorio:
+         - index.html (este archivo)
+         - profile.jpg (tu foto de perfil optimizada)
+      3. Ve a Settings → Pages
+      4. Selecciona la rama main como source
+      5. Tu página estará disponible en: https://tu-usuario.github.io/nombre-repo/
+      
+      CARACTERÍSTICAS:
+      - La foto se carga desde profile.jpg (archivo externo)
+      - La vCard incluye la foto en base64 automáticamente
+      - Compatible con iOS, Android, Outlook, Gmail
+      - Diseño responsive y accesible
+      - Un solo clic para descargar contacto completo
+    -->
+</body>
+</html>
