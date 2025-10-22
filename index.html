@@ -14,22 +14,13 @@
     <title>Gabriel Epuyao Barrientos - Investigador &amp; coordinador</title>
     
     <!--
-      ESTRUCTURA DE ARCHIVOS PARA GITHUB PAGES:
+      INSTRUCCIONES:
       
-      tu-repositorio/
-      ├── index.html (este archivo)
-      └── profile.jpg (tu foto de perfil)
-      
-      IMPORTANTE:
-      - Ambos archivos deben estar en el mismo directorio
-      - La foto debe llamarse "profile.jpg" (o actualiza la referencia en el código)
-      - La foto se cargará automáticamente en la página
-      - Al descargar la vCard, la foto se incluirá en formato base64
-      
-      PARA ACTUALIZAR TU FOTO:
-      1. Reemplaza el archivo profile.jpg en tu repositorio
-      2. No necesitas modificar el código HTML
-      3. GitHub Pages actualizará automáticamente
+      1. Sube este archivo (index.html) y profile.jpg al mismo directorio en GitHub
+      2. Asegúrate de que ambos archivos estén en la raíz del repositorio
+      3. La foto debe llamarse exactamente "profile.jpg" (minúsculas)
+      4. GitHub Pages se actualizará automáticamente
+      5. La foto se verá en la página y se incluirá en la vCard descargable
     -->
     
     <style>
@@ -532,8 +523,8 @@
                 this.textContent = 'Generando vCard...';
                 this.disabled = true;
                 
-                // Fetch the image file
-                const response = await fetch('profile.jpg');
+                // Fetch the image file - use same path as HTML
+                const response = await fetch('./profile.jpg');
                 
                 if (!response.ok) {
                     throw new Error('No se pudo cargar la imagen');
