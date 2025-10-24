@@ -8,10 +8,11 @@
     
     <!-- Open Graph meta tags -->
     <meta property="og:title" content="Gabriel Epuyao Barrientos">
-    <meta property="og:description" content="Investigador en salud mental, inteligencia artificial, agentes generativos y ciudades">
+    <meta property="og:description" content="Investigador en inteligencia artificial, agentes generativos y ciudades inteligentes">
     <meta property="og:type" content="website">
     
     <title>Gabriel Epuyao Barrientos - Investigador &amp; coordinador</title>
+
     
     <style>
         :root {
@@ -82,9 +83,7 @@
           --transition-smooth: all 0.2s ease;
         }
 
-        /* REMOVED DARK MODE - Forces light mode for accessibility */
-        /* Dark mode caused contrast violations with dark green text on dark backgrounds */
-        /* All users now get consistent high-contrast light mode experience */
+
 
         /* Base styles */
         * {
@@ -105,14 +104,32 @@
 
         body {
             min-height: 100vh;
-            background-color: var(--color-background);
+            background: linear-gradient(135deg, #f5f3ed 0%, #e8f4f8 50%, #e8f5e8 100%);
+            background-attachment: fixed;
             display: flex;
             flex-direction: column;
+            position: relative;
+        }
+        
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('https://user-gen-media-assets.s3.amazonaws.com/seedream_images/f52b56bd-f858-4acf-b5c6-9785e312b37d.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            opacity: 0.08;
+            pointer-events: none;
+            z-index: -1;
         }
 
         /* Hero Section - Split Layout (2025 Design) */
         .hero {
-            background-color: var(--color-background);
+            background-color: transparent;
             padding: var(--space-64) var(--space-24);
             display: grid;
             grid-template-columns: auto 1fr;
@@ -203,7 +220,7 @@
 
         /* Main content - Card-based sections */
         .main {
-            background-color: var(--color-background);
+            background-color: transparent;
             padding: var(--space-48) var(--space-24);
         }
 
@@ -354,7 +371,7 @@
 
         /* Footer - Minimal */
         .footer {
-            background-color: var(--color-background);
+            background-color: transparent;
             text-align: center;
             padding: var(--space-48) var(--space-24);
             color: var(--color-text-light);
@@ -420,8 +437,10 @@
     <!-- Hero Section - Split Layout -->
     <section class="hero">
         <div class="hero-photo">
-            <img src="profile.jpg" alt="Gabriel Epuyao Barrientos" class="profile-photo" 
+            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMDAsKCwsNDhIQDQ4RDgsLEBYQERMUFhUYHSgcGhsjHBYWICwgIyYnKSopGR8tMC0oKSj/2wBDAQMEBQYFBgYGBgYIBQgKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAAyAMgDASIAAhEBAxEB/8QAHQABAAICAwEAAAAAAAAAAAAAAAEFAQIGAwcJCP/EAEcQAAEDAgMEBgUHBwQDAAAAAAECAwQABREGEiExQVETImFxkQYyUqGx0RQjYnKSsXPC8CM0Q1OSorPB0yVTY4OS/8QAGgEBAQEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACERAQEAAgICAgMAAAAAAAAAAAABAgMRBBIxIUETIlFxkf/aAAwDAQACEQMRAD8A7qIiAiIgIiICIiAiIgIiICIiAiIgo9p3xq2p0l9w+e0xQp2JX3Kkqzq2bqQ2b0n9i9Czq1J2u2bqf4nqj9m2g2s2cV9w5l3h4kGZp9y9yq7x7WcK3y2I0m8vH0q3C9oY1i4vGmG2t3Kk2S9k1l3i6pQx3lJxkzW2S7eQk2oN8v+E7f8AxuYQ8r9q0f2XvM0Jm3p2b5lK5h2pUj0z2r7y1k/1q3Y0fXl1v4kq7wV4q2bZlK0nJ6W+0c2W+Qw1gY1m2m5t1Yy5l7qkqCmbiK4ZQk8k4U1k9uUo4fTj9wY0e3j1q0Wq1d3VtJ8iK2oZq9S1e2m2l2mVq0m2rY2m2m2YfB6Hqv6j1X0yq3m1Ztqk2rVfW+q7q9f8ARv0+X8r2vK8i1k6w1rU3pK2pblb4a2N7o6m3q5p8X9l5mQn8o5SP2Y9Y7Qm0mH4Qy8tQ5m3k6r2b1JXlq2r2m3m3m3m2g0q0r0pVq0r0q0q0q0q0q0q0q0q0q0q0q0q0q0q0r0q0q0q0r0q0q0q0q0q0q0q0q0q0q0q0q0q0q0q0q0q0q0r0q0q0q0q0q0q0q0q0q0q0q0r0q0q0q0q0q0q0q0q0q0q0r//Z" alt="Gabriel Epuyao Barrientos" class="profile-photo" 
                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            <div class="profile-photo-placeholder" style="display: none;">
+                GE
             </div>
         </div>
         
@@ -432,7 +451,7 @@
                 <p style="font-weight: var(--font-weight-semibold); margin-bottom: var(--space-16);">Líneas de investigación:</p>
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-8);">
                     <div>🤖 Inteligencia artificial</div>
-                    <div>👥 Simulación de agentes generativos</div>
+                    <div>👥 Agentes generativos</div>
                     <div>🏙️ Ciudades inteligentes</div>
                 </div>
             </div>
@@ -469,7 +488,7 @@
                 <div class="contact-list">
                     <div class="contact-item">
                         <span class="contact-icon">📱</span>
-                        <span>+56 9 6306 8845</span>
+                        <a href="tel:+56963068845">+56 9 6306 8845</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">✉️</span>
@@ -477,7 +496,15 @@
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">🌐</span>
-                        <a href="https://fica.ufro.cl" target="_blank">fica.ufro.cl</a>
+                        <a href="https://fica.ufro.cl" target="_blank" rel="noopener noreferrer">fica.ufro.cl</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">💼</span>
+                        <a href="https://www.linkedin.com/in/gabriel-epuyao-barrientos-3a0984336/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <span class="contact-icon">🆔</span>
+                        <a href="https://orcid.org/0009-0002-6671-114X" target="_blank" rel="noopener noreferrer">ORCID: 0009-0002-6671-114X</a>
                     </div>
                     <div class="contact-item">
                         <span class="contact-icon">📍</span>
@@ -497,7 +524,7 @@
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 - Gabriel Epuyao Barrientos.</p>
+        <p>&copy; 2025 Gabriel Epuyao Barrientos. Universidad de La Frontera.</p>
     </footer>
 
     <script>
@@ -536,8 +563,10 @@ ROLE:Investigador
 TEL;TYPE=CELL:+56963068845
 EMAIL;TYPE=INTERNET:gabriel.epuyao@ufrontera.cl
 URL:https://fica.ufro.cl
+URL:https://www.linkedin.com/in/gabriel-epuyao-barrientos-3a0984336/
+URL:https://orcid.org/0009-0002-6671-114X
 ADR;TYPE=WORK:;;Av. Francisco Salazar 01145;Temuco;La Araucanía;4811230;Chile
-NOTE:Investigador en inteligencia artificial, agentes generativos y ciudades inteligentes. Estudiante del programa de doctorado en ingeniería. Asesor tecnológico ING500 y docente ING300.
+NOTE:Investigador en inteligencia artificial, agentes generativos y ciudades inteligentes. Estudiante del programa de doctorado en ingeniería. Asesor tecnológico ING500 y docente ING300. ORCID: 0009-0002-6671-114X
 PHOTO;ENCODING=BASE64;TYPE=JPEG:${base64data}
 REV:${new Date().toISOString()}
 END:VCARD`;
@@ -578,8 +607,10 @@ ROLE:Investigador
 TEL;TYPE=CELL:+56963068845
 EMAIL;TYPE=INTERNET:gabriel.epuyao@ufrontera.cl
 URL:https://fica.ufro.cl
+URL:https://www.linkedin.com/in/gabriel-epuyao-barrientos-3a0984336/
+URL:https://orcid.org/0009-0002-6671-114X
 ADR;TYPE=WORK:;;Av. Francisco Salazar 01145;Temuco;La Araucanía;4811230;Chile
-NOTE:Investigador en inteligencia artificial, agentes generativos y ciudades inteligentes. Estudiante del programa de doctorado en ingeniería. Asesor tecnológico ING500 y docente ING300.
+NOTE:Investigador en inteligencia artificial, agentes generativos y ciudades inteligentes. Estudiante del programa de doctorado en ingeniería. Asesor tecnológico ING500 y docente ING300. ORCID: 0009-0002-6671-114X
 REV:${new Date().toISOString()}
 END:VCARD`;
                 
@@ -621,5 +652,7 @@ END:VCARD`;
             });
         });
     </script>
+    
+
 </body>
 </html>
